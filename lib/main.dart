@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_application_1/createaccount.dart';
 import 'package:flutter_application_1/itempage.dart';
 void main() {
   runApp(const MyApp()); // Always wrap your app in MyApp, where MaterialApp is the root
@@ -43,7 +44,7 @@ child: Column(
               fit: BoxFit.fill,
             ),
           ),
-          Positioned(
+         const Positioned(
             top: 20,
             left: 20,
             child: Text(
@@ -61,7 +62,7 @@ child: Column(
   ],
 )
 
-      ),
+),
       backgroundColor: Colors.blueGrey,
       appBar: AppBar(
         backgroundColor: Colors.blueGrey,
@@ -70,7 +71,14 @@ child: Column(
           style: TextStyle(color: Colors.white),
         ),
         actions:[
-           IconButton(onPressed: (){ }, icon: Icon(Icons.person),iconSize: 28,color: Colors.white,)
+           IconButton(onPressed: () {
+                  // Navigate to the second page (ItemPage)
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const CreateAccount()),
+                  );
+           }, icon: Icon(Icons.person),iconSize: 28,color: Colors.white,),
+            
         ]
       ),
       body: Center(
