@@ -48,7 +48,7 @@ class _CreateAccountState extends State<CreateAccount> {
         ),
         backgroundColor: Colors.blueGrey,
         body: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(44.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
