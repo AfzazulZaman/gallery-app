@@ -30,19 +30,37 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       drawer: Drawer(
         backgroundColor: Colors.blueGrey,
-        child: Column(
-          children: [
-            Opacity(
-               opacity: 0.6,
-              child: Expanded(
-                child: Image.network(
-                  'https://cdn.pixabay.com/photo/2022/04/10/09/02/cats-7122943_1280.png',
-                  fit: BoxFit.fill, 
-                ),
+      
+child: Column(
+  children: [
+    Expanded(
+      child: Stack(
+        children: [
+          Opacity(
+            opacity: 0.6,
+            child: Image.network(
+              'https://cdn.pixabay.com/photo/2022/04/10/09/02/cats-7122943_1280.png',
+              fit: BoxFit.fill,
+            ),
+          ),
+          Positioned(
+            top: 20,
+            left: 20,
+            child: Text(
+              'Imagination',
+              style: TextStyle(
+                fontSize: 24,
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
               ),
             ),
-          ],
-        ),
+          ),
+        ],
+      ),
+    ),
+  ],
+)
+
       ),
       backgroundColor: Colors.blueGrey,
       appBar: AppBar(
